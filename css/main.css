@@ -1,0 +1,34 @@
+body { font-family: Georgia, Times; width: 90%; margin: 10px auto 50px auto; }
+
+h1 { font-size: 2.0em; font-weight: normal; }
+h2 { font-size: 1.4em; font-weight: normal; }
+h3 { font-size: 1.2em; font-weight: normal; }
+
+a, a:link, a:hover { color: #46a8c5; text-decoration: underline; cursor: pointer; }
+a:hover { text-decoration: none; }
+
+a.ajax, a.ajax:link { text-decoration: none; border-bottom: 1px dashed #56b8d5; }
+
+div#header { text-align: center; }
+
+div#navigation { clear: both; }
+div#navigation div#logo { float: left; position: relative; width: 274px; vertical-align: middle; margin-top: 0px; }
+div#navigation div#info { margin-left: 380px; }
+div#navigation div#info a { font-size: 1.1em; }
+
+div.divider { background: url('../images/divider.png') repeat-x; width: 100%; height: 7px;}
+
+div#content { margin: 20px 0 0 0; font-family: Times, Times New Roman, Serif}
+div#content h1, div#content h2, div#content h3 { font-family: Georgia }
+div#content h1 { font-size: 1.7em; }
+div#content div#comments { float: right; width: 40%; }
+div#content div#list     { margin-right: 42%; }
+
+div#content div#list div.person { clear: left; margin-bottom: 0px; }
+div#list div.person h3 { margin-bottom: 0px; }
+div#list h1 { margin-top: 0px; }
+div#list div.person div.photo { float: left; margin: 0 20px 0 0; }
+div#list div.person div.position { margin: 0px 0 10px 0; padding: 0px; color: #858482; }
+div#list span.position { color: #858482; font-size: 0.9em; }
+div#list div.person div.clear_left { clear: left; margin: 0px; padding: 0px;}
+div#list h3 { margin: 0px 0 10px 0; padding: 0px;}
