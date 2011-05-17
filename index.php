@@ -81,7 +81,6 @@
         <div class="clear_left">&nbsp;</div>
       </div>
       
-      <h3>Сотрудники</h3>
       <ul>
       <?php for ($i=1; $i<count($lab2); $i++): ?>
         <li>
