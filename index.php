@@ -54,7 +54,7 @@
   
   <div id="content">
     
-    <div id="pub_list" title="Главные публикации" style="font-size: 0.8em; display: none;">
+    <div id="pub_list" title="Главные публикации" style="font-size: 0.8em;">
     </div>
     
     <div id="comments">
@@ -89,14 +89,13 @@
           <a name="p<?= $num ?>_<?= $i ?>"></a>
           <a onclick="$('#p<?= $num ?>_<?= $i ?>').toggle('slow')" class="ajax"><?= $lab2[$i][0] ?></a> <span class="position"><?php p_if($lab2[$i][2]) ?></span>
         </div>
-        <div class="person" id="p<?= $num ?>_<?= $i ?>" style="display: none; padding: 10px 0 0 0;">
+        <div class="person" id="p<?= $num ?>_<?= $i ?>" style="padding: 10px 0 0 0;">
           <div class="photo">
             <?php if ($lab2[$i][1]): ?>
               <img src="images/avatars/<?= $lab2[$i][1] ?>" alt="" width="100" title="">
             <?php endif; ?>
           </div>
-          <h3><?= $lab2[$i][0] ?></h3>
-          <div class="position"><?php p_if($lab2[$i][2])?></div>
+          <div class="position"><?php (isset($lab2[$i][3])) ? p_if($lab2[$i][3]) : '' ?></div>
           <div class="publications" id="bobylev_publications">
             <a  onclick="create_dialog(<?= $num ?>, <?= $i ?>)" class="ajax">Главные публикации</a>
           </div>
