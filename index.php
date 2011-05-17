@@ -85,21 +85,24 @@
       <?php for ($i=1; $i<count($lab2); $i++): ?>
         <li>
         <div class="person_link">
-          <a name="p<?= $num ?>_<?= $i ?>"></a>
-          <a onclick="$('#p<?= $num ?>_<?= $i ?>').toggle('slow')" class="ajax"><?= $lab2[$i][0] ?></a> <span class="position"><?php p_if($lab2[$i][2]) ?></span>
+          <h3>
+          <a onclick="$('#p<?= $num ?>_<?= $i ?>').toggle('slow')" class="ajax"><?= $lab2[$i][0] ?></a></h3> <span class="position"><?php p_if($lab2[$i][2]) ?><?= (isset($lab2[$i][3])) ? ', '.$lab2[$i][3] : '' ?></span>
         </div>
+        <?php if ((file_exists('data/p'.$num.'_'.$i.'.html')) || ($lab2[$i][1])): ?>
         <div class="person" id="p<?= $num ?>_<?= $i ?>" style="padding: 10px 0 0 0;">
           <div class="photo">
             <?php if ($lab2[$i][1]): ?>
               <img src="images/avatars/<?= $lab2[$i][1] ?>" alt="" width="100" title="">
             <?php endif; ?>
           </div>
-          <div class="position"><?php (isset($lab2[$i][3])) ? p_if($lab2[$i][3]) : '' ?></div>
-          <div class="publications" id="bobylev_publications">
-            <a  onclick="create_dialog(<?= $num ?>, <?= $i ?>)" class="ajax">Главные публикации</a>
-          </div>
-          <div class="clear_left">&nbsp;</div>
+          <?php if (file_exists('data/p'.$num.'_'.$i.'.html')): ?>
+            <div class="publications" id="bobylev_publications">
+              <a  onclick="create_dialog(<?= $num ?>, <?= $i ?>)" class="ajax">Главные публикации</a>
+            </div>
+          <?php endif; ?>
+          <div class="clear_left"><!-- --></div>
         </div>
+        <?php endif; ?>
         </li>
       <?php endfor; ?>
       </ul>

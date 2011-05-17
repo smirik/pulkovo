@@ -31,4 +31,4 @@ div#list div.person div.photo { float: left; margin: 0 20px 0 0; }
 div#list div.person div.position { margin: 0px 0 10px 0; padding: 0px; color: #858482; }
 div#list span.position { color: #858482; font-size: 0.9em; }
 div#list div.person div.clear_left { clear: left; margin: 0px; padding: 0px;}
-div#list h3 { margin: 0px 0 10px 0; padding: 0px;}
+div#list h3 { margin: 15px 0 10px 0; padding: 0px;}
